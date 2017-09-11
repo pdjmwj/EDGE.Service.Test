@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd2" />
+  <xs:element name="CampaignTokenDecode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CampaignTokenDecodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CampaignTokenDecodeResult" nillable="true" type="ServiceResponseOfSecureCampaignLinkNcCATIYq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CampaignTokenContactInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CampaignTokenContactInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CampaignTokenContactInfoResult" nillable="true" type="ServiceResponseOfContactLookupResultNcCATIYq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="evwContactSearchSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContactSearchResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactSearch2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwContactSearchSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactSearch2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContactSearch2Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactSearch3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwContactSearchSearchCriteriaMulti" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactSearch3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContactSearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContactSearch2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwListContactSearchSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwListContactSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContactSearch2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListContactSearch2Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwListContactSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContactSearch3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwListContactSearchSearchCriteriaMulti" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwListContactSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListContactSearch3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListContactSearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwListContactSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemographicSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="evwContactDemoSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactDemoSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemographicSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemographicSearchResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactDemoLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemographicSearch2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwContactDemoSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactDemoSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemographicSearch2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemographicSearch2Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactDemoLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemographicSearch3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwContactDemoSearchCriteriaMulti" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactDemoSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemographicSearch3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemographicSearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactDemoLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="evwEventSearchSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwEventSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EventSearchResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwEventSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventSearch2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwEventSearchSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwEventSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventSearch2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EventSearch2Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwEventSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventSearch3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwEventSearchSearchCriteriaMulti" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwEventSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventSearch3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EventSearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwEventSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwCompanySearchSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwCompanySearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySearchResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwCompanySearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearch3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwCompanySearchSearchCriteriaMulti" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwCompanySearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearch3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwCompanySearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearchPrimaryAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwCompanySearchPrimaryAddressSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwCompanySearchPrimaryAddressSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearchPrimaryAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySearchPrimaryAddressResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwCompanySearchPrimaryAddressLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearchBranchAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwCompanySearchBranchAddressSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwCompanySearchBranchAddressSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanySearchBranchAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanySearchBranchAddressResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwCompanySearchBranchAddressLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyDemographicSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwCompanyDemoSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwCompanyDemoSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyDemographicSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyDemographicSearchResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwCompanyDemoLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyDemographicSearch3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwCompanyDemoSearchCriteriaMulti" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwCompanyDemoSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyDemographicSearch3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyDemographicSearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwCompanyDemoLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwContactTransactionSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactTransactionSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransactionSearchResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactTransactionLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionSearch3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwContactTransactionSearchCriteriaMulti" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactTransactionSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionSearch3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransactionSearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactTransactionLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventDemographicMappingSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwEventDemographicMappingSearchSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwEventDemographicMappingSearchSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EventDemographicMappingSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EventDemographicMappingSearchResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwEventDemographicMappingSearchLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrationSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="evwContactRegistrationSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactRegistrationSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrationSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrationSearchResult" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrationSearch2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwContactRegistrationSearchCriteria" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactRegistrationSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrationSearch2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrationSearch2Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrationSearch3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchCriteria" nillable="true" type="ArrayOfevwContactRegistrationSearchCriteriaMulti" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="ArrayOfevwContactRegistrationSortOrder" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrationSearch3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrationSearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

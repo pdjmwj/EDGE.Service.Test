@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDA395DF-1C05-44DE-A1FD-F40F5CAE89D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EDGE.Controller</RootNamespace>
+    <AssemblyName>EDGE.Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EdgeWebServiceManagerBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EdgeAuthService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EdgeRegService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\EdgeAuthService\AuthenticationService.wsdl" />
+    <None Include="Service References\EdgeAuthService\AuthenticationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeAuthService\AuthenticationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeAuthService\AuthenticationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeAuthService\AuthenticationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeAuthService\EDGE.Controller.EdgeAuthService.ServiceResponseOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfContactLookupResultNcCATIYq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfSecureCampaignLinkNcCATIYq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwCompanyDemoLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwCompanySearchBranchAddressLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwCompanySearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwCompanySearchPrimaryAddressLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactDemoLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactSearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactTransactionLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwEventDemographicMappingSearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwEventSearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwListContactSearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\RegistrationService.wsdl" />
+    <None Include="Service References\EdgeRegService\RegistrationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeRegService\RegistrationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeRegService\RegistrationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeRegService\RegistrationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeRegService\RegistrationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeRegService\RegistrationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EdgeAuthService\" />
+    <WCFMetadataStorage Include="Service References\EdgeRegService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdgeAuthService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdgeAuthService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdgeAuthService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdgeRegService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdgeRegService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdgeRegService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EDGE.Common\EDGE.Common.csproj">
+      <Project>{f53412c8-e190-4b38-91cf-9e42c0b38e5f}</Project>
+      <Name>EDGE.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EDGE.ExceptionManagement\EDGE.ExceptionManagement.csproj">
+      <Project>{bb5e9021-260a-4f88-be7e-376867e348f8}</Project>
+      <Name>EDGE.ExceptionManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

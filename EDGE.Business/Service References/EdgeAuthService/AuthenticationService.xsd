@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://qa.experientedge.com/Services/AuthenticationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataManagement.Framework.Common" />
+  <xs:complexType name="ServiceResponseOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceResponseOf{0}{#}" Namespace="" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReturnValue" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceResponseOfstring" nillable="true" type="ServiceResponseOfstring" />
+  <xs:complexType name="ServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExecMsgs" nillable="true" type="ArrayOfExecMsg">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceResponse" nillable="true" type="ServiceResponse" />
+  <xs:complexType name="ArrayOfExecMsg">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExecMsg" nillable="true" type="ExecMsg" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExecMsg" nillable="true" type="ArrayOfExecMsg" />
+  <xs:complexType name="ExecMsg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MessageID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DataManagement.Framework.Common" minOccurs="0" name="Severity" type="q1:ExecMsgSeverity">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExecMsg" nillable="true" type="ExecMsg" />
+</xs:schema>

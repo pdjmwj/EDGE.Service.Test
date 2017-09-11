@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RegistrationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_RegistrationService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="CustomBinding_RegistrationService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="CustomBinding_RegistrationService2_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataManagement.Framework.Common" />
+      <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistrationService_CampaignTokenDecode_InputMessage">
+    <wsdl:part name="parameters" element="tns:CampaignTokenDecode" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CampaignTokenDecode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CampaignTokenDecodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CampaignTokenContactInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CampaignTokenContactInfo" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CampaignTokenContactInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CampaignTokenContactInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ContactSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContactSearch" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ContactSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContactSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ContactSearch2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContactSearch2" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ContactSearch2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContactSearch2Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ContactSearch3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContactSearch3" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ContactSearch3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContactSearch3Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ListContactSearch2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListContactSearch2" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ListContactSearch2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListContactSearch2Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ListContactSearch3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListContactSearch3" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_ListContactSearch3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListContactSearch3Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_DemographicSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemographicSearch" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_DemographicSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemographicSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_DemographicSearch2_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemographicSearch2" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_DemographicSearch2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemographicSearch2Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_DemographicSearch3_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemographicSearch3" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_DemographicSearch3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemographicSearch3Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_EventSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventSearch" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_EventSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_EventSearch2_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventSearch2" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_EventSearch2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventSearch2Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_EventSearch3_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventSearch3" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_EventSearch3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventSearch3Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanySearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearch" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanySearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanySearch3_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearch3" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanySearch3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearch3Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanySearchPrimaryAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearchPrimaryAddress" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanySearchPrimaryAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearchPrimaryAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanySearchBranchAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearchBranchAddress" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanySearchBranchAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanySearchBranchAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanyDemographicSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyDemographicSearch" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanyDemographicSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyDemographicSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanyDemographicSearch3_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyDemographicSearch3" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanyDemographicSearch3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyDemographicSearch3Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_TransactionSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionSearch" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_TransactionSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_TransactionSearch3_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionSearch3" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_TransactionSearch3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactionSearch3Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_EventDemographicMappingSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventDemographicMappingSearch" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_EventDemographicMappingSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventDemographicMappingSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_RegistrationSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationSearch" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_RegistrationSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_RegistrationSearch2_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationSearch2" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_RegistrationSearch2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationSearch2Response" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_RegistrationSearch3_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationSearch3" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_RegistrationSearch3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationSearch3Response" />
+  </wsdl:message>
+  <wsdl:portType name="RegistrationService">
+    <wsdl:operation name="CampaignTokenDecode">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CampaignTokenDecode" message="tns:RegistrationService_CampaignTokenDecode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CampaignTokenDecodeResponse" message="tns:RegistrationService_CampaignTokenDecode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CampaignTokenContactInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CampaignTokenContactInfo" message="tns:RegistrationService_CampaignTokenContactInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CampaignTokenContactInfoResponse" message="tns:RegistrationService_CampaignTokenContactInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/ContactSearch" message="tns:RegistrationService_ContactSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/ContactSearchResponse" message="tns:RegistrationService_ContactSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch2">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/ContactSearch2" message="tns:RegistrationService_ContactSearch2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/ContactSearch2Response" message="tns:RegistrationService_ContactSearch2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch3">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/ContactSearch3" message="tns:RegistrationService_ContactSearch3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/ContactSearch3Response" message="tns:RegistrationService_ContactSearch3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch2">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/ListContactSearch2" message="tns:RegistrationService_ListContactSearch2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/ListContactSearch2Response" message="tns:RegistrationService_ListContactSearch2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch3">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/ListContactSearch3" message="tns:RegistrationService_ListContactSearch3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/ListContactSearch3Response" message="tns:RegistrationService_ListContactSearch3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/DemographicSearch" message="tns:RegistrationService_DemographicSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/DemographicSearchResponse" message="tns:RegistrationService_DemographicSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch2">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/DemographicSearch2" message="tns:RegistrationService_DemographicSearch2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/DemographicSearch2Response" message="tns:RegistrationService_DemographicSearch2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch3">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/DemographicSearch3" message="tns:RegistrationService_DemographicSearch3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/DemographicSearch3Response" message="tns:RegistrationService_DemographicSearch3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/EventSearch" message="tns:RegistrationService_EventSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/EventSearchResponse" message="tns:RegistrationService_EventSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch2">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/EventSearch2" message="tns:RegistrationService_EventSearch2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/EventSearch2Response" message="tns:RegistrationService_EventSearch2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch3">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/EventSearch3" message="tns:RegistrationService_EventSearch3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/EventSearch3Response" message="tns:RegistrationService_EventSearch3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CompanySearch" message="tns:RegistrationService_CompanySearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CompanySearchResponse" message="tns:RegistrationService_CompanySearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch3">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CompanySearch3" message="tns:RegistrationService_CompanySearch3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CompanySearch3Response" message="tns:RegistrationService_CompanySearch3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchPrimaryAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CompanySearchPrimaryAddress" message="tns:RegistrationService_CompanySearchPrimaryAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CompanySearchPrimaryAddressResponse" message="tns:RegistrationService_CompanySearchPrimaryAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchBranchAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CompanySearchBranchAddress" message="tns:RegistrationService_CompanySearchBranchAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CompanySearchBranchAddressResponse" message="tns:RegistrationService_CompanySearchBranchAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CompanyDemographicSearch" message="tns:RegistrationService_CompanyDemographicSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CompanyDemographicSearchResponse" message="tns:RegistrationService_CompanyDemographicSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch3">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CompanyDemographicSearch3" message="tns:RegistrationService_CompanyDemographicSearch3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CompanyDemographicSearch3Response" message="tns:RegistrationService_CompanyDemographicSearch3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/TransactionSearch" message="tns:RegistrationService_TransactionSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/TransactionSearchResponse" message="tns:RegistrationService_TransactionSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch3">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/TransactionSearch3" message="tns:RegistrationService_TransactionSearch3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/TransactionSearch3Response" message="tns:RegistrationService_TransactionSearch3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventDemographicMappingSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/EventDemographicMappingSearch" message="tns:RegistrationService_EventDemographicMappingSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/EventDemographicMappingSearchResponse" message="tns:RegistrationService_EventDemographicMappingSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/RegistrationSearch" message="tns:RegistrationService_RegistrationSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/RegistrationSearchResponse" message="tns:RegistrationService_RegistrationSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch2">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/RegistrationSearch2" message="tns:RegistrationService_RegistrationSearch2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/RegistrationSearch2Response" message="tns:RegistrationService_RegistrationSearch2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch3">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/RegistrationSearch3" message="tns:RegistrationService_RegistrationSearch3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/RegistrationSearch3Response" message="tns:RegistrationService_RegistrationSearch3_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_RegistrationService" type="tns:RegistrationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CampaignTokenDecode">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CampaignTokenDecode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampaignTokenContactInfo">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CampaignTokenContactInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch2">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch3">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch2">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/ListContactSearch2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch3">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/ListContactSearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch2">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch3">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/EventSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch2">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/EventSearch2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch3">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/EventSearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CompanySearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch3">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CompanySearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchPrimaryAddress">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CompanySearchPrimaryAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchBranchAddress">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CompanySearchBranchAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CompanyDemographicSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch3">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CompanyDemographicSearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/TransactionSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch3">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/TransactionSearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventDemographicMappingSearch">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/EventDemographicMappingSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch2">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch3">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomBinding_RegistrationService" type="tns:RegistrationService">
+    <wsp:PolicyReference URI="#CustomBinding_RegistrationService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CampaignTokenDecode">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CampaignTokenDecode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampaignTokenContactInfo">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CampaignTokenContactInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ListContactSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ListContactSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchPrimaryAddress">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearchPrimaryAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchBranchAddress">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearchBranchAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyDemographicSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyDemographicSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/TransactionSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/TransactionSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventDemographicMappingSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventDemographicMappingSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomBinding_RegistrationService1" type="tns:RegistrationService">
+    <wsp:PolicyReference URI="#CustomBinding_RegistrationService1_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CampaignTokenDecode">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CampaignTokenDecode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampaignTokenContactInfo">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CampaignTokenContactInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ListContactSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ListContactSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchPrimaryAddress">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearchPrimaryAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchBranchAddress">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearchBranchAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyDemographicSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyDemographicSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/TransactionSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/TransactionSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventDemographicMappingSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventDemographicMappingSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomBinding_RegistrationService2" type="tns:RegistrationService">
+    <wsp:PolicyReference URI="#CustomBinding_RegistrationService2_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CampaignTokenDecode">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CampaignTokenDecode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampaignTokenContactInfo">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CampaignTokenContactInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ContactSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ListContactSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListContactSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/ListContactSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemographicSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/DemographicSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchPrimaryAddress">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearchPrimaryAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanySearchBranchAddress">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanySearchBranchAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyDemographicSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyDemographicSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyDemographicSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/TransactionSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/TransactionSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventDemographicMappingSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/EventDemographicMappingSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch2">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationSearch3">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegistrationService">
+    <wsdl:port name="BasicHttpBinding_RegistrationService" binding="tns:BasicHttpBinding_RegistrationService">
+      <soap:address location="http://qa.experientedge.com/Services/RegistrationService.svc/soap" />
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_RegistrationService" binding="tns:CustomBinding_RegistrationService">
+      <soap12:address location="http://qa.experientedge.com/Services/RegistrationService.svc/bme" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://qa.experientedge.com/Services/RegistrationService.svc/bme</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_RegistrationService1" binding="tns:CustomBinding_RegistrationService1">
+      <soap12:address location="http://qa.experientedge.com/Services/RegistrationService.svc/bmez" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://qa.experientedge.com/Services/RegistrationService.svc/bmez</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_RegistrationService2" binding="tns:CustomBinding_RegistrationService2">
+      <soap12:address location="http://qa.experientedge.com/Services/RegistrationService.svc/bmegz" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://qa.experientedge.com/Services/RegistrationService.svc/bmegz</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

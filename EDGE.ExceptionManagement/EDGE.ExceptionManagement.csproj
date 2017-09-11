@@ -7,8 +7,8 @@
     <ProjectGuid>{BB5E9021-260A-4F88-BE7E-376867E348F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EDGE.Exception</RootNamespace>
-    <AssemblyName>EDGE.Exception</AssemblyName>
+    <RootNamespace>EDGE.ExceptionManagement</RootNamespace>
+    <AssemblyName>EDGE.ExceptionManagement</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

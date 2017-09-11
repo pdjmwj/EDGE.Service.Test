@@ -7,8 +7,8 @@
     <ProjectGuid>{FDA395DF-1C05-44DE-A1FD-F40F5CAE89D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EDGE.Controller</RootNamespace>
-    <AssemblyName>EDGE.Controller</AssemblyName>
+    <RootNamespace>EDGE.Business</RootNamespace>
+    <AssemblyName>EDGE.Business</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EdgeWebService.cs" />
     <Compile Include="EdgeWebServiceManagerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\EdgeAuthService\Reference.cs">
@@ -74,7 +75,49 @@
     <None Include="Service References\EdgeAuthService\AuthenticationService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\EdgeAuthService\EDGE.Business.EdgeAuthService.ServiceResponseOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\EdgeAuthService\EDGE.Controller.EdgeAuthService.ServiceResponseOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfContactLookupResultNcCATIYq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfSecureCampaignLinkNcCATIYq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwCompanyDemoLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwCompanySearchBranchAddressLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwCompanySearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwCompanySearchPrimaryAddressLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactDemoLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactSearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactTransactionLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwEventDemographicMappingSearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwEventSearchLjh4bohd5F2dSckg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwListContactSearchLjh4bohd5F2dSckg.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EdgeRegService\EDGE.Controller.EdgeRegService.ServiceResponseOfContactLookupResultNcCATIYq.datasource">

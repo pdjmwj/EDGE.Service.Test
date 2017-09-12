@@ -223,6 +223,7 @@ namespace EDGE.Business
 			if ( edgeCampaignInfo == null )
 				return null;
 
+
 			// No auto-fill; just return the campaign per previous behavior.
 			if ( !edgeCampaignInfo.DecodeSuccess )
 				return edgeCampaignInfo;
@@ -243,6 +244,7 @@ namespace EDGE.Business
 					EdgeRegService.State state = address == null ? null : result.States.Where(a => a.StateId == address.StateId).FirstOrDefault();
 				}
 			}
+
 			return edgeCampaignInfo;
 		}
 		#endregion

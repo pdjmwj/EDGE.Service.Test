@@ -33,9 +33,9 @@
 			// 
 			// buttonTest
 			// 
-			this.buttonTest.Location = new System.Drawing.Point(88, 88);
+			this.buttonTest.Location = new System.Drawing.Point(86, 47);
 			this.buttonTest.Name = "buttonTest";
-			this.buttonTest.Size = new System.Drawing.Size(75, 23);
+			this.buttonTest.Size = new System.Drawing.Size(112, 34);
 			this.buttonTest.TabIndex = 0;
 			this.buttonTest.Text = "Run Test";
 			this.buttonTest.UseVisualStyleBackColor = true;
@@ -45,10 +45,11 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.ClientSize = new System.Drawing.Size(284, 148);
 			this.Controls.Add(this.buttonTest);
 			this.Name = "FormMain";
-			this.Text = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "EDGE Service Testor";
 			this.ResumeLayout(false);
 
 		}

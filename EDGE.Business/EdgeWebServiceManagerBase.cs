@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using EDGE.Common;
+using EDGE.Business.EdgeRegService;
 
 namespace EDGE.Business
 {
@@ -99,7 +100,7 @@ namespace EDGE.Business
 		#endregion
 
 		#region | property: RegistrationServiceClient |
-		private EdgeRegService.RegistrationServiceClient RegistrationServiceClient
+		protected EdgeRegService.RegistrationServiceClient RegistrationServiceClient
 		{
 			get
 			{

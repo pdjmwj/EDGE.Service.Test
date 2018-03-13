@@ -84,6 +84,9 @@
     <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfContactLookupResultNcCATIYq.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfint.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\EdgeRegService\EDGE.Business.EdgeRegService.ServiceResponseOfSecureCampaignLinkNcCATIYq.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -176,6 +179,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EdgeRegService\RegistrationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdgeRegService\RegistrationService6.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

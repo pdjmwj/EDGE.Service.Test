@@ -24,6 +24,7 @@
   <Metadata>
     <MetadataFile FileName="RegistrationService.xsd" MetadataType="Schema" ID="fb47245a-2ea3-4d6b-9aab-bd497f27105d" SourceId="1" SourceUrl="https://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd3" />
     <MetadataFile FileName="RegistrationService1.xsd" MetadataType="Schema" ID="cb25d2f0-cf61-4893-ba51-1379e042d47b" SourceId="1" SourceUrl="https://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RegistrationService6.xsd" MetadataType="Schema" ID="6e423fe0-fa33-4265-bb71-b7b6cbbfb782" SourceId="1" SourceUrl="https://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd6" />
     <MetadataFile FileName="RegistrationService.wsdl" MetadataType="Wsdl" ID="d29e18f1-cf32-4c76-a5d9-d39530cefe72" SourceId="1" SourceUrl="https://qa.experientedge.com/Services/RegistrationService.svc" />
     <MetadataFile FileName="RegistrationService2.xsd" MetadataType="Schema" ID="7d21bae3-0824-4dbb-9661-62370bb3a8ad" SourceId="1" SourceUrl="https://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd4" />
     <MetadataFile FileName="RegistrationService3.xsd" MetadataType="Schema" ID="94d3bc81-1664-41e6-bf79-712aa5c310b3" SourceId="1" SourceUrl="https://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd1" />

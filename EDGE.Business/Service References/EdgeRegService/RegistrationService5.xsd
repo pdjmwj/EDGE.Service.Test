@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd2" />
+  <xs:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd6" namespace="http://services.experient-inc.com" />
   <xs:element name="CampaignTokenDecode">
     <xs:complexType>
       <xs:sequence>
@@ -442,6 +443,22 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="RegistrationSearch3Result" nillable="true" type="ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyAdd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="auth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siloId" type="xs:int" />
+        <xs:element xmlns:q1="http://services.experient-inc.com" minOccurs="0" name="company" nillable="true" type="q1:dtoEDGECompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyAddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyAddResult" nillable="true" type="ServiceResponseOfint" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

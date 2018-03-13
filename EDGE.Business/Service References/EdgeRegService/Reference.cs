@@ -29,6 +29,7 @@ namespace EDGE.Business.EdgeRegService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactTransactionLjh4bohd5F2dSckg))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwEventDemographicMappingSearchLjh4bohd5F2dSckg))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(EDGE.Business.EdgeRegService.ServiceResponseOfint))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(EDGE.Business.EdgeRegService.ServiceResponseOfSecureCampaignLinkNcCATIYq))]
     public partial class ServiceResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -341,6 +342,29 @@ namespace EDGE.Business.EdgeRegService {
             }
             set {
                 if ((object.ReferenceEquals(this.ReturnValueField, value) != true)) {
+                    this.ReturnValueField = value;
+                    this.RaisePropertyChanged("ReturnValue");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceResponseOfint", Namespace="")]
+    [System.SerializableAttribute()]
+    public partial class ServiceResponseOfint : EDGE.Business.EdgeRegService.ServiceResponse {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ReturnValueField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public int ReturnValue {
+            get {
+                return this.ReturnValueField;
+            }
+            set {
+                if ((this.ReturnValueField.Equals(value) != true)) {
                     this.ReturnValueField = value;
                     this.RaisePropertyChanged("ReturnValue");
                 }
@@ -67616,6 +67640,303 @@ namespace EDGE.Business.EdgeRegService {
         sysUpdatedBy = 49,
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="dtoEDGECompany", Namespace="http://services.experient-inc.com")]
+    [System.SerializableAttribute()]
+    public partial class dtoEDGECompany : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private string Address1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Address2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Address3Field;
+        
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CompanyIdField;
+        
+        private string CompanyNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyName2Field;
+        
+        private string CountryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FaxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MemberIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneExtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneTollFreeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PostalCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PrimaryAddressIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StateCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WebSiteField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
+        public string Address1 {
+            get {
+                return this.Address1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Address1Field, value) != true)) {
+                    this.Address1Field = value;
+                    this.RaisePropertyChanged("Address1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Address2 {
+            get {
+                return this.Address2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Address2Field, value) != true)) {
+                    this.Address2Field = value;
+                    this.RaisePropertyChanged("Address2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Address3 {
+            get {
+                return this.Address3Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Address3Field, value) != true)) {
+                    this.Address3Field = value;
+                    this.RaisePropertyChanged("Address3");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public int CompanyId {
+            get {
+                return this.CompanyIdField;
+            }
+            set {
+                if ((this.CompanyIdField.Equals(value) != true)) {
+                    this.CompanyIdField = value;
+                    this.RaisePropertyChanged("CompanyId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
+        public string CompanyName {
+            get {
+                return this.CompanyNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyNameField, value) != true)) {
+                    this.CompanyNameField = value;
+                    this.RaisePropertyChanged("CompanyName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string CompanyName2 {
+            get {
+                return this.CompanyName2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyName2Field, value) != true)) {
+                    this.CompanyName2Field = value;
+                    this.RaisePropertyChanged("CompanyName2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
+        public string CountryName {
+            get {
+                return this.CountryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryNameField, value) != true)) {
+                    this.CountryNameField = value;
+                    this.RaisePropertyChanged("CountryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Fax {
+            get {
+                return this.FaxField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FaxField, value) != true)) {
+                    this.FaxField = value;
+                    this.RaisePropertyChanged("Fax");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string MemberId {
+            get {
+                return this.MemberIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MemberIdField, value) != true)) {
+                    this.MemberIdField = value;
+                    this.RaisePropertyChanged("MemberId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string PhoneExt {
+            get {
+                return this.PhoneExtField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneExtField, value) != true)) {
+                    this.PhoneExtField = value;
+                    this.RaisePropertyChanged("PhoneExt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string PhoneTollFree {
+            get {
+                return this.PhoneTollFreeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneTollFreeField, value) != true)) {
+                    this.PhoneTollFreeField = value;
+                    this.RaisePropertyChanged("PhoneTollFree");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string PostalCode {
+            get {
+                return this.PostalCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PostalCodeField, value) != true)) {
+                    this.PostalCodeField = value;
+                    this.RaisePropertyChanged("PostalCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public int PrimaryAddressId {
+            get {
+                return this.PrimaryAddressIdField;
+            }
+            set {
+                if ((this.PrimaryAddressIdField.Equals(value) != true)) {
+                    this.PrimaryAddressIdField = value;
+                    this.RaisePropertyChanged("PrimaryAddressId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string StateCode {
+            get {
+                return this.StateCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StateCodeField, value) != true)) {
+                    this.StateCodeField = value;
+                    this.RaisePropertyChanged("StateCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string WebSite {
+            get {
+                return this.WebSiteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WebSiteField, value) != true)) {
+                    this.WebSiteField = value;
+                    this.RaisePropertyChanged("WebSite");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EdgeRegService.RegistrationService")]
     public interface RegistrationService {
@@ -67769,6 +68090,12 @@ namespace EDGE.Business.EdgeRegService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RegistrationService/RegistrationSearch3", ReplyAction="http://tempuri.org/RegistrationService/RegistrationSearch3Response")]
         System.Threading.Tasks.Task<EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg> RegistrationSearch3Async(string auth, EDGE.Business.EdgeRegService.evwContactRegistrationSearchCriteriaMulti[] searchCriteria, EDGE.Business.EdgeRegService.evwContactRegistrationSortOrder[] sortOrder, int skip, int take);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RegistrationService/CompanyAdd", ReplyAction="http://tempuri.org/RegistrationService/CompanyAddResponse")]
+        EDGE.Business.EdgeRegService.ServiceResponseOfint CompanyAdd(string auth, int siloId, EDGE.Business.EdgeRegService.dtoEDGECompany company);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RegistrationService/CompanyAdd", ReplyAction="http://tempuri.org/RegistrationService/CompanyAddResponse")]
+        System.Threading.Tasks.Task<EDGE.Business.EdgeRegService.ServiceResponseOfint> CompanyAddAsync(string auth, int siloId, EDGE.Business.EdgeRegService.dtoEDGECompany company);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67996,6 +68323,14 @@ namespace EDGE.Business.EdgeRegService {
         
         public System.Threading.Tasks.Task<EDGE.Business.EdgeRegService.ServiceResponseOfTupleOfintArrayOfevwContactRegistrationLjh4bohd5F2dSckg> RegistrationSearch3Async(string auth, EDGE.Business.EdgeRegService.evwContactRegistrationSearchCriteriaMulti[] searchCriteria, EDGE.Business.EdgeRegService.evwContactRegistrationSortOrder[] sortOrder, int skip, int take) {
             return base.Channel.RegistrationSearch3Async(auth, searchCriteria, sortOrder, skip, take);
+        }
+        
+        public EDGE.Business.EdgeRegService.ServiceResponseOfint CompanyAdd(string auth, int siloId, EDGE.Business.EdgeRegService.dtoEDGECompany company) {
+            return base.Channel.CompanyAdd(auth, siloId, company);
+        }
+        
+        public System.Threading.Tasks.Task<EDGE.Business.EdgeRegService.ServiceResponseOfint> CompanyAddAsync(string auth, int siloId, EDGE.Business.EdgeRegService.dtoEDGECompany company) {
+            return base.Channel.CompanyAddAsync(auth, siloId, company);
         }
     }
 }

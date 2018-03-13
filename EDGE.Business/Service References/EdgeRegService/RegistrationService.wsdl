@@ -32,6 +32,7 @@
       <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataManagement.Framework.Common" />
       <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
       <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://qa.experientedge.com/Services/RegistrationService.svc?xsd=xsd6" namespace="http://services.experient-inc.com" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="RegistrationService_CampaignTokenDecode_InputMessage">
@@ -184,6 +185,12 @@
   <wsdl:message name="RegistrationService_RegistrationSearch3_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegistrationSearch3Response" />
   </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanyAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyAdd" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationService_CompanyAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyAddResponse" />
+  </wsdl:message>
   <wsdl:portType name="RegistrationService">
     <wsdl:operation name="CampaignTokenDecode">
       <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CampaignTokenDecode" message="tns:RegistrationService_CampaignTokenDecode_InputMessage" />
@@ -284,6 +291,10 @@
     <wsdl:operation name="RegistrationSearch3">
       <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/RegistrationSearch3" message="tns:RegistrationService_RegistrationSearch3_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/RegistrationSearch3Response" message="tns:RegistrationService_RegistrationSearch3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/RegistrationService/CompanyAdd" message="tns:RegistrationService_CompanyAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RegistrationService/CompanyAddResponse" message="tns:RegistrationService_CompanyAdd_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_RegistrationService" type="tns:RegistrationService">
@@ -506,6 +517,15 @@
     </wsdl:operation>
     <wsdl:operation name="RegistrationSearch3">
       <soap:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyAdd">
+      <soap:operation soapAction="http://tempuri.org/RegistrationService/CompanyAdd" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -742,6 +762,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="CompanyAdd">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="CustomBinding_RegistrationService1" type="tns:RegistrationService">
     <wsp:PolicyReference URI="#CustomBinding_RegistrationService1_policy" />
@@ -971,6 +1000,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="CompanyAdd">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="CustomBinding_RegistrationService2" type="tns:RegistrationService">
     <wsp:PolicyReference URI="#CustomBinding_RegistrationService2_policy" />
@@ -1193,6 +1231,15 @@
     </wsdl:operation>
     <wsdl:operation name="RegistrationSearch3">
       <soap12:operation soapAction="http://tempuri.org/RegistrationService/RegistrationSearch3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyAdd">
+      <soap12:operation soapAction="http://tempuri.org/RegistrationService/CompanyAdd" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -29187,4 +29187,27 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="evwContactRegistrationSearchCriteriaMulti" nillable="true" type="evwContactRegistrationSearchCriteriaMulti" />
+  <xs:complexType name="ServiceResponseOfint">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceResponseOf{0}{#}" Namespace="" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReturnValue" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceResponseOfint" nillable="true" type="ServiceResponseOfint" />
 </xs:schema>

@@ -14,10 +14,64 @@ namespace EDGE.Business
 		{
 		}
 
+		#region | Test_CompanyAdd |
+		/// <summary>
+		/// EventXL.Registration.Show.Business.EdgeWebServiceManager.cs
+		/// I think this is where you would put your EXL -> EDGE interface code.
+		/// </summary>
+		/// <param name="Registrant"></param>
+		public ExecutionMessage[] Test_CompanyAdd()
+		{
+			var Msgs = new ExecutionMessageCollection();
+			try
+			{
+				// Transfer registrant to EDGE dto
+				var company = new dtoEDGECompany()
+				{
+					CompanyName = "Internet Research Link",
+					CompanyName2 = "",
+					WebSite = "www.pdjmwj.com",
+					Address1 = "6220 Main ST",
+					Address2 = "",
+					Address3 = "",
+					City = "Mount Airy",
+					StateCode = "MD",
+					CountryName = "",
+					PostalCode = "21771",
+					Fax = "",
+					Phone = "",
+					PhoneExt = "",
+					PhoneTollFree = "",
+					MemberId = "",
+				};
+
+				int siloId = this.SelectSiloIdFromEdge("ADT121", "EventXL");
+
+				string auth = this.ProcessAuth(mUserID, mPassword);
+				if ( !string.IsNullOrEmpty(auth) )
+				{
+					EdgeRegService.RegistrationServiceClient client = this.RegistrationServiceClient;
+					var result = client.CompanyAdd(auth, siloId, company);
+					bool bHasErrors = this.HandleWSErrors(result);
+					if ( !bHasErrors )
+					{
+						// Not sure where this is stored in EXL
+						int EDGECompanyId = result.ReturnValue;
+					}
+				}
+			}
+			catch ( Exception ex )
+			{
+				Msgs.Add(new ErrorMessage(ex.FormatMessage("Test_CompanyAdd")));
+			}
+			return Msgs.ToArray();
+		}
+		#endregion
+
 		#region | CompanyAdd |
 		public int CompanyAdd(string showCode, dtoEDGECompany company)
 		{
-			int CompanyId = 0;
+			int EDGECompanyId = 0;
 
 			int siloId = this.SelectSiloIdFromEdge(showCode, "EventXL");
 
@@ -26,14 +80,14 @@ namespace EDGE.Business
 			{
 				EdgeRegService.RegistrationServiceClient client = this.RegistrationServiceClient;
 				var result = client.CompanyAdd(auth, siloId, company);
-				bool bHasErrors = HandleWSErrors(result);
+				bool bHasErrors = this.HandleWSErrors(result);
 				if ( !bHasErrors )
 				{
-					CompanyId = result.ReturnValue;
+					EDGECompanyId = result.ReturnValue;
 				}
 			}
 
-			return CompanyId;
+			return EDGECompanyId;
 		}
 		#endregion
 

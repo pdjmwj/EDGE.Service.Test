@@ -54,7 +54,7 @@ namespace EDGE.Service.Test
 
 				using ( EdgeWebService svc = new EdgeWebService() )
 				{
-					int x = svc.CompanyAdd("ADT121", company);
+					int EDGECompanyId = svc.CompanyAdd("ADT121", company);
 				}
 			}
 			catch ( Exception ex )
